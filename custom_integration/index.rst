@@ -12,7 +12,12 @@ User Authentication
 
 You must use HTTP Basic Authentication for authenticating a user. The authentication credentials are the *Basic Auth Username* and *Basic Auth Password* values you provided in the custom integration configuration.
 
-1. GET */customers*
+Endpoint
+~~~~~~~~
+
+You must implement the below endpoint which expects the given *required paramerters*.
+
+GET */customers*
 
 Finds the customer with given parameters.
 
@@ -27,7 +32,9 @@ Finds the customer with given parameters.
 +-------+--------+---------------------+
 
 
-**Response**
+Response
+~~~~~~~~~
+You must return a HTTP response with json data in the below format. You can use the *"custom_attributes"* field in the json response to specify any extra information about your customers.
 
 ::
 
