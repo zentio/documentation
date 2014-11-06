@@ -64,9 +64,6 @@ You must return a *"Content-Type: application/json"* response with json data in 
 
 Example
 ~~~~~~~~
+You can find an example implementation here_.
 
-**Curl**
-
-::
-
-    curl 'https://your-domain.com/customers?email=john@gmail.com&phone=555-555' -u your-username:your-password
+.. _here: https://github.com/zentio/custom-integration-rest-example/blob/master/README.md
