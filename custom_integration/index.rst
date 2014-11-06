@@ -5,7 +5,7 @@ This document provides the necessary guidelines and few examples for creating a 
 
 The examples given below assume that you have provided *https://your-domain.com* as the *Base URL* in custom integration configuration.
 
-***\* Important: make sure you always use SSL on your domain***
+**\* Important: make sure you always use SSL on your domain**
 
 User Authentication
 ~~~~~~~~~~~~~~~~~~~
