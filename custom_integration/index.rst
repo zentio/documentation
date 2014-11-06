@@ -1,6 +1,5 @@
 Custom Integration REST Web Service Guidelines
 ===============================================
-
 This document provides the necessary guidelines and few examples for creating a simple REST Web Service for a custom integration.
 
 The examples given below assume that you have provided *https://your-domain.com* as the *Base URL* in custom integration configuration.
@@ -9,13 +8,11 @@ The examples given below assume that you have provided *https://your-domain.com*
 
 User Authentication
 ~~~~~~~~~~~~~~~~~~~
-
-You must use HTTP Basic Authentication for authenticating a user. The authentication credentials are the *Basic Auth Username* and *Basic Auth Password* values you provided in the custom integration configuration.
+You must use HTTP Basic Authentication for authenticating a user. The authentication credentials are the *Basic Auth Username* and *Basic Auth Password* values you provided in your custom integration configuration.
 
 Endpoint
 ~~~~~~~~
-
-You must implement the below endpoint which expects the given *required paramerters*.
+You must implement the below endpoint which expects the below *required paramerters*.
 
 GET */customers*
 
@@ -34,7 +31,7 @@ Finds the customer with given parameters.
 
 Response
 ~~~~~~~~~
-You must return a HTTP response with json data in the below format. You can use the *"custom_attributes"* field in the json response to specify any extra information about your customers.
+You must return a *"Content-Type: application/json"* response with json data in the below format. You can use the *"custom_attributes"* field in the json response to specify any extra information about your customers.
 
 ::
 
@@ -64,7 +61,11 @@ You must return a HTTP response with json data in the below format. You can use 
        ]
     }
 
-**Curl example**
+
+Example
+~~~~~~~~
+
+**Curl**
 
 ::
 
