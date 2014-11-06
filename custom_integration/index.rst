@@ -62,8 +62,8 @@ You must return a *"Content-Type: application/json"* response with json data in 
     }
 
 
-Example
+Examples
 ~~~~~~~~
-You can find an example implementation here_.
+* A php example can be found here_.
 
 .. _here: https://github.com/zentio/custom-integration-rest-example/blob/master/README.md
