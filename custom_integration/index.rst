@@ -1,7 +1,7 @@
-Custom Integration API Documentation
-=====================================
+Custom Integration REST Web Service Guidelines
+===============================================
 
-Custom integration allows you to use your existing data (such as customer data) within the contact center software.
+This document provides the necessary guidelines and few examples for creating a simple REST Web Service for a custom integration.
 
 The examples given below assume that you have provided *https://your-domain.com* as the *Base URL* in custom integration configuration.
 
