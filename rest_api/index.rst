@@ -370,7 +370,7 @@ The endpoint returns stories for the parameters specified.
 **Example**
 
 +-----------------------------------------------------------------------------------------------------------+
-| GET *https://{subdomain}.zent.io/api/v1/story/search?apikey={api_key}&query=subject&page=1&page_size=10*  |
+| GET *https://{subdomain}.zent.io/api/v1/story/search?apikey={api_key}&query=subject&page=1&page_size=10&start=2014-09-16&end=2014-09-20*  |
 +-----------------------------------------------------------------------------------------------------------+
 
 **Parameters**
@@ -381,6 +381,8 @@ The endpoint returns stories for the parameters specified.
  query         yes    The story's subject.
  page          yes    The result's page. 
  page_size     no     The result's page size. Defaults to 10.   
+ start         yes    The start date for the query. It must be a ISO 8601 date. For example: 2014-09-16.
+ end           yes    The end date for the query. It must be a ISO 8601 date. For example: 2014-09-20.
  =========  ========  ======================================================================================================
 
 **Response Sample**
