@@ -457,7 +457,7 @@ The endpoint creates a story for the parameters specified.
  user          yes    The story's user id or email.  
  subject       yes    The story's subject. 
  message       yes    The story's message. 
- note          yes    The story's note. 
+ extendedModel no     The story's extended model. 
  =========  ========  ======================================================================================================
 
 **Response Sample**
