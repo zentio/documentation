@@ -450,15 +450,15 @@ The endpoint creates a story for the parameters specified.
 
 **Parameters**
 
- ==============  ========  ======================================================================================================
- Name       Required  Description
- ==============  ========  ======================================================================================================
- customer           yes    The story's customer id or email.
- user               yes    The story's user id or email.  
- subject            yes    The story's subject. 
- message            yes    The story's message. 
- extendedModel      no     The story's extended model. 
- ==============  ========  ======================================================================================================
+ =============  ========  ==================================================================================================
+ Name           Required  Description
+ =============  ========  ==================================================================================================
+ customer          yes    The story's customer id or email.
+ user              yes    The story's user id or email.  
+ subject           yes    The story's subject. 
+ message           yes    The story's message. 
+ extendedModel     no     The story's extended model. 
+ =============  ========  ==================================================================================================
 
 **Response Sample**
 
@@ -506,7 +506,7 @@ The endpoint closes a story for the parameter specified.
 **Example**
 
 +----------------------------------------------------------------------------+
-| POST *https://{subdomain}.zent.io/api/v1/story/close?apikey={api_key}*  |
+| POST *https://{subdomain}.zent.io/api/v1/story/close?apikey={api_key}*     |
 +----------------------------------------------------------------------------+
 
 **Parameters**
@@ -669,6 +669,5 @@ The endpoint replies to a stream for the parameters specified.
     {
         "id":"546457503896ed5c20000001"
     }
-
 
 
