@@ -8,7 +8,7 @@ Customers End Points
 
 Search Customers
 ----------------
-The endpoint returns customers for the parameters specified. 
+The endpoint returns customers for the parameters specified.
 
 **Example**
 
@@ -22,11 +22,11 @@ The endpoint returns customers for the parameters specified.
  Name       Required  Description
  =========  ========  ======================================================================================================
  name          yes    The customer's name.
- email         no     The customer's email.  
- phone         no     The customer's phone. 
- page          yes    The result's page. 
- page_size     no     The result's page size. Defaults to 10.   
- sorting       no     The result's sorting. Possible values are *last_created* and *last_updated*. Defaults to last_updated.   
+ email         no     The customer's email.
+ phone         no     The customer's phone.
+ page          yes    The result's page.
+ page_size     no     The result's page size. Defaults to 10.
+ sorting       no     The result's sorting. Possible values are *last_created* and *last_updated*. Defaults to last_updated.
  =========  ========  ======================================================================================================
 
 **Response Sample**
@@ -153,10 +153,12 @@ The endpoint creates a customer for the parameters specified.
  Name       Required  Description
  =========  ========  ======================================================================================================
  name          yes    The customer's name.
- email         yes    The customer's email.  
- phone         yes    The customer's phone. 
- address       yes    The customer's address. 
- tags          no     The customer's tags.
+ email         no     The customer's email.
+ phone         no     The customer's phone.
+ address       no     The customer's address.
+ tags          no     The customer's tags (space-seperated).
+ createdAt     no     The customer's creation date. Possible values are all combinations of date and time in a format, which are valid constructs for PHP's DateTime-class. Defaults to current timestamp.
+ updatedAt     no     The customer's last update date. Possible values are all combinations of date and time in a format, which are valid constructs for PHP's DateTime-class. Defaults to current timestamp.
  =========  ========  ======================================================================================================
 
 **Response Sample**
@@ -186,10 +188,10 @@ The endpoint updates a customer with the parameters specified.
  =========  ========  ======================================================================================================
  customer      yes    The customer's id or the customer's email.
  name          yes    The customer's name.
- email         yes    The customer's email.  
- phone         yes    The customer's phone. 
- address       yes    The customer's address. 
- tags          no     The customer's tags.
+ email         yes    The customer's email.
+ phone         yes    The customer's phone.
+ address       yes    The customer's address.
+ tags          no     The customer's tags (space-seperated).
  =========  ========  ======================================================================================================
 
 **Response Sample**
@@ -208,7 +210,7 @@ Statistics End Points
 
 Get Chat Statistics
 -------------------
-The endpoint returns chat statistics for the parameters specified. 
+The endpoint returns chat statistics for the parameters specified.
 
 **Example**
 
@@ -221,7 +223,7 @@ The endpoint returns chat statistics for the parameters specified.
  =========  ========  ==================================================================================================================
  Name       Required  Description
  =========  ========  ==================================================================================================================
- section       yes    The section for the query. Possible values are *general*, *performance*, *quality*, *service_level* and *reviews*. 
+ section       yes    The section for the query. Possible values are *general*, *performance*, *quality*, *service_level* and *reviews*.
  start         yes    The start date for the query. It must be a ISO 8601 date. For example: 2014-09-16.
  end           yes    The end date for the query. It must be a ISO 8601 date. For example: 2014-09-20.
  user          no     The user's id or email.
@@ -259,12 +261,12 @@ The endpoint returns chat statistics for the parameters specified.
 
 Get Email Statistics
 --------------------
-The endpoint returns email statistics for the parameters specified. 
+The endpoint returns email statistics for the parameters specified.
 
 **Example**
 
 +---------------------------------------------------------------------------------------------------------------------+
-| GET *https://{subdomain}.zent.io/api/v1/statistic/email/{section}?apikey={api_key}&start=2014-09-16&end=2014-09-20*  |
+| GET *https://{subdomain}.zent.io/api/v1/statistic/email/{section}?apikey={api_key}&start=2014-09-16&end=2014-09-20* |
 +---------------------------------------------------------------------------------------------------------------------+
 
 **Parameters**
@@ -272,7 +274,7 @@ The endpoint returns email statistics for the parameters specified.
  =========  ========  ==================================================================================================================
  Name       Required  Description
  =========  ========  ==================================================================================================================
- section       yes    The section for the query. Possible values are *general*, *quality*, *service_level* and *reviews*. 
+ section       yes    The section for the query. Possible values are *general*, *quality*, *service_level* and *reviews*.
  start         yes    The start date for the query. It must be a ISO 8601 date. For example: 2014-09-16.
  end           yes    The end date for the query. It must be a ISO 8601 date. For example: 2014-09-20.
  user          no     The user's id or email.
@@ -310,7 +312,7 @@ The endpoint returns email statistics for the parameters specified.
 
 Get Voice Statistics
 --------------------
-The endpoint returns voice statistics for the parameters specified. 
+The endpoint returns voice statistics for the parameters specified.
 
 **Example**
 
@@ -323,7 +325,7 @@ The endpoint returns voice statistics for the parameters specified.
  =========  ========  ==================================================================================================================
  Name       Required  Description
  =========  ========  ==================================================================================================================
- section       yes    The section for the query. Possible values are *general*, *performance*, *quality*, *service_level* and *reviews*. 
+ section       yes    The section for the query. Possible values are *general*, *performance*, *quality*, *service_level* and *reviews*.
  start         yes    The start date for the query. It must be a ISO 8601 date. For example: 2014-09-16.
  end           yes    The end date for the query. It must be a ISO 8601 date. For example: 2014-09-20.
  user          no     The user's id or email.
@@ -365,7 +367,7 @@ Stories End Points
 
 Search Stories
 --------------
-The endpoint returns stories for the parameters specified. 
+The endpoint returns stories for the parameters specified.
 
 **Example**
 
@@ -379,8 +381,8 @@ The endpoint returns stories for the parameters specified.
  Name       Required  Description
  =========  ========  ======================================================================================================
  query         yes    The story's subject.
- page          yes    The result's page. 
- page_size     no     The result's page size. Defaults to 10.   
+ page          yes    The result's page.
+ page_size     no     The result's page size. Defaults to 10.
  start         yes    The start date for the query. It must be a ISO 8601 date. For example: 2014-09-16.
  end           yes    The end date for the query. It must be a ISO 8601 date. For example: 2014-09-20.
  =========  ========  ======================================================================================================
@@ -454,10 +456,14 @@ The endpoint creates a story for the parameters specified.
  Name           Required  Description
  =============  ========  ==================================================================================================
  customer          yes    The story's customer id or email.
- user              yes    The story's user id or email.  
- subject           yes    The story's subject. 
- message           yes    The story's message. 
- extendedModel     no     The story's extended model. 
+ user              yes    The story's user id or email.
+ subject           yes    The story's subject.
+ message           yes    The story's message.
+ extendedModel     no     The story's extended model.
+ state             no     The story's state. Possible values are *open* and *closed*. Defaults to open.
+ priority          no     The story's priority. Possible values are *low*, *normal* and *high*. Defaults to normal.
+ createdAt         no     The story's creation date. Possible values are all combinations of date and time in a format, which are valid constructs for PHP's DateTime-class. Defaults to current timestamp.
+ updatedAt         no     The story's last update date. Possible values are all combinations of date and time in a format, which are valid constructs for PHP's DateTime-class. Defaults to current timestamp.
  =============  ========  ==================================================================================================
 
 **Response Sample**
@@ -486,7 +492,9 @@ The endpoint creates a note for a story based on the parameters specified.
  Name       Required  Description
  =========  ========  ======================================================================================================
  story         yes    The story's id.
- content       yes    The note's content. 
+ content       yes    The note's content.
+ createdAt     no     The note's creation date. Possible values are all combinations of date and time in a format, which are valid constructs for PHP's DateTime-class. Defaults to current timestamp.
+ updatedAt     no     The note's last update date. Possible values are all combinations of date and time in a format, which are valid constructs for PHP's DateTime-class. Defaults to current timestamp.
  =========  ========  ======================================================================================================
 
 **Response Sample**
@@ -497,6 +505,37 @@ The endpoint creates a note for a story based on the parameters specified.
         "id":"54652f6f3896ed8018000000"
     }
 
+
+Add Story Mail interaction
+--------------------------
+The endpoint creates a mail interaction for a story based on the parameters specified.
+
+**Example**
+
++----------------------------------------------------------------------------+
+| POST *https://{subdomain}.zent.io/api/v1/story/add_mail?apikey={api_key}*  |
++----------------------------------------------------------------------------+
+
+**Parameters**
+
+ =============  ========  ======================================================================================================
+ Name           Required  Description
+ =============  ========  ======================================================================================================
+ story             yes    The story's id.
+ content           yes    The mail interaction's content.
+ direction         no     The mail interaction's direction. Possible values are *in* for emails adressed to the helpdesk and *out* for outgoing emails to customers. Defaults to in.
+ createdAt         no     The mail interaction's creation date. Possible values are all combinations of date and time in a format, which are valid constructs for PHP's DateTime-class. Defaults to current timestamp.
+ updatedAt         no     The mail interaction's last update date. Possible values are all combinations of date and time in a format, which are valid constructs for PHP's DateTime-class. Defaults to current timestamp.
+ notification      no     Specifies if a notification in form of a real email should be sent to customer / agent. Possible values are *on* or *off*. Defaults to on.
+ =============  ========  ======================================================================================================
+
+**Response Sample**
+
+::
+
+    {
+        "id":"54652f6f3896ed8018000000"
+    }
 
 
 Close Story
@@ -562,7 +601,7 @@ Streams End Points
 
 Get Streams
 -----------
-The endpoint returns streams for the parameters specified. 
+The endpoint returns streams for the parameters specified.
 
 **Example**
 
@@ -575,8 +614,8 @@ The endpoint returns streams for the parameters specified.
  =========  ========  ======================================================================================================
  Name       Required  Description
  =========  ========  ======================================================================================================
- page          yes    The result's page. 
- page_size     no     The result's page size. Defaults to 10.   
+ page          yes    The result's page.
+ page_size     no     The result's page size. Defaults to 10.
  =========  ========  ======================================================================================================
 
 **Response Sample**
@@ -628,8 +667,8 @@ The endpoint creates a stream for the parameters specified.
  =========  ========  ======================================================================================================
  Name       Required  Description
  =========  ========  ======================================================================================================
- user          yes    The stream's user id or email.  
- content       yes    The stream's content. 
+ user          yes    The stream's user id or email.
+ content       yes    The stream's content.
  =========  ========  ======================================================================================================
 
 **Response Sample**
