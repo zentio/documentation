@@ -386,35 +386,36 @@ The endpoint returns the schedule for the channel specified.
 **Response Sample**
 
 ::
-
-{
-  "1": {
-    "from": {
-      "date": "2012-01-01 00:30:00.000000",
-      "timezone_type": 3,
-      "timezone": "America\/New_York"
-    },
-    "to": {
-      "date": "2012-01-01 17:30:00.000000",
-      "timezone_type": 3,
-      "timezone": "America\/New_York"
-    }
-},
-  ...
+    
+    {
+        "1": {
+            "from": {
+                "date": "2012-01-01 00:30:00.000000",
+                "timezone_type": 3,
+                "timezone": "America\/New_York"
+            },
+            "to": {
+                "date": "2012-01-01 17:30:00.000000",
+                "timezone_type": 3,
+                "timezone": "America\/New_York"
+            }
+        },
         
-  "5": {
-    "from": {
-      "date": "2012-01-01 00:30:00.000000",
-      "timezone_type": 3,
-      "timezone": "America\/New_York"
-    },
-    "to": {
-      "date": "2012-01-01 17:30:00.000000",
-      "timezone_type": 3,
-      "timezone": "America\/New_York"
+        ...
+        
+        "5": {
+            "from": {
+                "date": "2012-01-01 00:30:00.000000",
+                "timezone_type": 3,
+                "timezone": "America\/New_York"
+            },
+            "to": {
+                "date": "2012-01-01 17:30:00.000000",
+                "timezone_type": 3,
+                "timezone": "America\/New_York"
+            }
+        }
     }
-  }
-}
 
 
 
