@@ -653,6 +653,53 @@ The endpoint reassigns a story to another user for the parameters specified.
 
 
 
+Users End Points
+==================
+
+Get Log
+--------------
+The endpoint returns the log for the user specified.
+
+**Example**
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+| GET *https://{subdomain}.zent.io/api/v1/user/log?apikey={api_key}&user={user_id}&start=2017-02-07&end=2017-02-07* |
++------------------------------------------------------------------------------------------------------------------------------------------+
+
+**Parameters**
+
+ =========  ========  ======================================================================================================
+ Name       Required  Description
+ =========  ========  ======================================================================================================
+ user          yes    The user's id.
+ start         yes    The start date for the query. It must be a ISO 8601 date. For example: 2014-09-16.
+ end           yes    The end date for the query. It must be a ISO 8601 date. For example: 2014-09-20.
+ =========  ========  ======================================================================================================
+
+**Response Sample**
+
+::
+
+    [
+        {"event": "Online", 
+        "moment": {
+            "date": "2017-02-07 04:03:58.000000",
+            "timezone_type": 3,
+            "timezone": "America\/New_York"
+            }
+        },
+        {"event": "Active",
+         "moment": {
+             "date": "2017-02-07 04:03:58.000000",
+             "timezone_type": 3,
+             "timezone": "America\/New_York"
+             }
+        },
+        ...        
+    ]
+
+
+
 Streams End Points
 ==================
 
