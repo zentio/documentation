@@ -362,6 +362,62 @@ The endpoint returns voice statistics for the parameters specified.
 
 
 
+Services End Points
+==================
+
+Get Schedule
+--------------
+The endpoint returns the schedule for the channel specified.
+
+**Example**
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+| GET *https://{subdomain}.zent.io/api/v1/service/schedule?apikey={api_key}&channel=voice* |
++------------------------------------------------------------------------------------------------------------------------------------------+
+
+**Parameters**
+
+ =========  ========  ======================================================================================================
+ Name       Required  Description
+ =========  ========  ======================================================================================================
+ channel       yes    The specific channel.
+ =========  ========  ======================================================================================================
+
+**Response Sample**
+
+::
+
+{
+  "1": {
+    "from": {
+      "date": "2012-01-01 00:30:00.000000",
+      "timezone_type": 3,
+      "timezone": "America\/New_York"
+    },
+    "to": {
+      "date": "2012-01-01 17:30:00.000000",
+      "timezone_type": 3,
+      "timezone": "America\/New_York"
+    }
+},
+  ...
+        
+  "5": {
+    "from": {
+      "date": "2012-01-01 00:30:00.000000",
+      "timezone_type": 3,
+      "timezone": "America\/New_York"
+    },
+    "to": {
+      "date": "2012-01-01 17:30:00.000000",
+      "timezone_type": 3,
+      "timezone": "America\/New_York"
+    }
+  }
+}
+
+
+
 Stories End Points
 ==================
 
