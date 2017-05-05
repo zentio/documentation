@@ -44,21 +44,50 @@ You must return a *"Content-Type: application/json"* response with json data in 
        "city": "Madrid",
        "postal_code" : "28032",
        "address": "Baker Street, London. UK",
-       "custom_attributes": [
-             {"field_1": {"label": "some label", "value": "some value" }},
-             {"field_2": {"label": "some label", "value": "some value" }},
-             {"orders": {
-                    "label": "Orders",
-                    "value": {
-                        "header": ["Order id", "description"],
-                        "items": [
-                            {"order_id": 1, "description": "product A"},
-                            {"order_id": 2, "description": "product B"}
-                        ]
-                    }
+       "custom_attributes": {
+             "field_1": {"label": "some label", "value": "some value" },
+             "field_2": {"label": "some label", "value": "some value" },
+             "orders": {
+                "label": "Orders",
+                "value": {
+                    "header": ["Order id", "description"],
+                    "items": [
+                        {"order_id": 1, "description": "product A"},
+                        {"order_id": 2, "description": "product B"}
+                    ]
                 }
             }
-       ]
+        }
+    }
+
+
+Or:
+
+::
+
+    {
+       "id": 1,
+       "name": "John Watson",
+       "email": "john@gmail.com",
+       "phone": "123456",
+       "country": "Spain",
+       "city": "Madrid",
+       "postal_code" : "28032",
+       "address": "Baker Street, London. UK",
+       "custom_attributes": [
+             {"label": "some label", "value": "some value" },
+             {"label": "some label", "value": "some value" },
+             {
+                "label": "Orders",
+                "value": {
+                    "header": ["Order id", "description"],
+                    "items": [
+                        {"order_id": 1, "description": "product A"},
+                        {"order_id": 2, "description": "product B"}
+                    ]
+                }
+            }
+        ]
     }
 
 
