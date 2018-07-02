@@ -1,5 +1,5 @@
 ========================
-Zent.IO REST Service API
+Zent.io REST Service API
 ========================
 This document provides the necessary guidelines and few examples for using the Service API.
 
@@ -101,7 +101,7 @@ The endpoint returns the customer stories for the parameters specified.
 **Example**
 
 +----------------------------------------------------------------------------------------------------------+
-| GET *https://{subdomain}.zent.io/api/v1/customer/search?apikey={api_key}&name=jhon&page=1&page_size=10*  |
+| GET *https://{subdomain}.zent.io/api/v1/customer/stories?apikey={api_key}&name=jhon&page=1&page_size=10*  |
 +----------------------------------------------------------------------------------------------------------+
 
 **Parameters**
@@ -109,7 +109,7 @@ The endpoint returns the customer stories for the parameters specified.
  =========  ========  ======================================================================================================
  Name       Required  Description
  =========  ========  ======================================================================================================
- customer      yes    The customer's id or the customer's email.
+ email         yes    The customer's id or the customer's email.
  page          yes    The result's page.
  page_size     no     The result's page size. Defaults to 10.
  sorting       no     The result's sorting. Possible values are *last_created* and *last_updated*. Defaults to last_updated.
